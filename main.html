@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Final Chargesheet - FIR 312/2023</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Times New Roman', serif;
+            line-height: 1.6;
+            background: #f5f5f5;
+            padding: 20px;
+        }
+        
+        .document {
+            max-width: 850px;
+            margin: 0 auto;
+            background: white;
+            padding: 60px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            border-bottom: 3px double #333;
+            padding-bottom: 20px;
+        }
+        
+        .header h1 {
+            font-size: 24px;
+            margin-bottom: 5px;
+        }
+        
+        .header h2 {
+            font-size: 20px;
+            margin-bottom: 3px;
+        }
+        
+        .header h3 {
+            font-size: 16px;
+            margin-bottom: 15px;
+            color: #444;
+        }
+        
+        .header h4 {
+            font-size: 20px;
+            margin-top: 10px;
+        }
+        
+        .case-info {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin-bottom: 30px;
+            font-size: 14px;
+        }
+        
+        .case-info div {
+            padding: 5px 0;
+        }
+        
+        .case-info strong {
+            font-weight: bold;
+        }
+        
+        .section {
+            margin: 30px 0;
+        }
+        
+        .section-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 15px;
+            padding-bottom: 5px;
+            border-bottom: 2px solid #333;
+        }
+        
+        .subsection-title {
+            font-size: 15px;
+            font-weight: bold;
+            margin: 20px 0 10px 0;
+        }
+        
+        .accused-box {
+            background: #f9f9f9;
+            border-left: 4px solid #333;
+            padding: 12px;
+            margin: 10px 0;
+        }
+        
+        .accused-name {
+            font-weight: bold;
+            font-size: 15px;
+            margin-bottom: 3px;
+        }
+        
+        .accused-details {
+            font-size: 14px;
+            color: #333;
+            margin: 3px 0;
+        }
+        
+        .timeline {
+            background: #f9f9f9;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 5px;
+        }
+        
+        .timeline-item {
+            margin: 8px 0;
+            padding-left: 20px;
+            position: relative;
+        }
+        
+        .timeline-item::before {
+            content: "•";
+            position: absolute;
+            left: 5px;
+            font-weight: bold;
+        }
+        
+        .timeline-time {
+            font-weight: bold;
+            color: #000;
+        }
+        
+        .flowchart {
+            background: white;
+            padding: 30px;
+            margin: 20px 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .flow-node-box {
+            background: white;
+            border: 2px solid #000;
+            border-radius: 5px;
+            padding: 12px 20px;
+            width: 280px;
+            text-align: center;
+        }
+        
+        .flow-name {
+            font-weight: bold;
+            font-size: 14px;
+            margin-bottom: 3px;
+        }
+        
+        .flow-subtitle {
+            font-size: 13px;
+            color: #333;
+            margin-bottom: 5px;
+        }
+        
+        .flow-detail {
+            font-size: 12px;
+            color: #333;
+            text-align: left;
+            margin: 2px 0;
+        }
+        
+        .flow-arrow {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 8px 0;
+        }
+        
+        .arrow-line {
+            width: 2px;
+            height: 20px;
+            background: #000;
+        }
+        
+        .arrow-label {
+            font-size: 11px;
+            font-style: italic;
+            color: #333;
+            background: white;
+            padding: 2px 8px;
+            margin: 2px 0;
+        }
+        
+        .arrow-head {
+            font-size: 16px;
+            color: #000;
+            line-height: 1;
+        }
+        
+        .charges-list, .conclusion-list {
+            margin: 15px 0;
+            padding-left: 20px;
+        }
+        
+        .charges-list li, .conclusion-list li {
+            margin: 10px 0;
+        }
+        
+        .prayer {
+            background: #f9f9f9;
+            padding: 20px;
+            margin: 20px 0;
+            border-left: 4px solid #333;
+        }
+        
+        .signature-section {
+            margin-top: 40px;
+            border-top: 2px solid #333;
+            padding-top: 20px;
+        }
+        
+        .signature-block {
+            margin: 15px 0;
+        }
+        
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            
+            .document {
+                box-shadow: none;
+                padding: 40px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="document">
+        <div class="header">
+            <h1>GOVERNMENT OF VIDARBHA STATE</h1>
+            <h2>VIDARBHA STATE POLICE</h2>
+            <h3>CRIMINAL INVESTIGATION BUREAU (CIB)</h3>
+            <h4>FINAL CHARGESHEET</h4>
+        </div>
+        
+        <div class="case-info">
+            <div><strong>Case No:</strong> FIR 312/2023</div>
+            <div><strong>Police Station:</strong> Rajendra Nagar PS, Nagarvati City</div>
+            <div><strong>Under Sections:</strong> 302, 201, 120B VPC & Sec. 7/13 Anti-Corruption Act</div>
+            <div><strong>Date of Registration:</strong> 19 August 2023</div>
+            <div><strong>Date of Filing Chargesheet:</strong> 21 February 2024</div>
+            <div><strong>Investigating Officer:</strong> Inspector A. Korde, CIB Nagarvati</div>
+        </div>
+        
+        <div class="section">
+            <div class="section-title">PART I: INTRODUCTION</div>
+            <p>This Final Chargesheet is filed under Section 173 VCrPC in the matter of the homicide of <strong>Ms. Rhea Kulkarni (28)</strong>, investigative journalist, found deceased in Flat 703, Prakash Residency, FC Road, Nagarvati, on 19 August 2023.</p>
+            <p style="margin-top: 10px;">Subsequent forensic, digital, and witness evidence confirm the death was a <strong>premeditated murder</strong> arising from a coordinated conspiracy involving information leaks, political influence, and targeted poisoning.</p>
+        </div>
+        
+        <div class="section">
+            <div class="section-title">PART II: ACCUSED PERSONS</div>
+            
+            <div class="subsection-title">PRIMARY ACCUSED</div>
+            <div class="accused-box">
+                <div class="accused-name">1. Nikhil Ramesh Deshmukh (Alias: "Kite")</div>
+                <div class="accused-details">Age 34, Junior Documentation Officer, Patil Realty Pvt. Ltd.</div>
+                <div class="accused-details">Sections: 302, 201, 120B VPC</div>
+            </div>
+            
+            <div class="subsection-title">CO-ACCUSED</div>
+            <div class="accused-box">
+                <div class="accused-name">2. Sanjay Mohan Wagh</div>
+                <div class="accused-details">Age 39, Political Aide to Minister (Urban Development)</div>
+                <div class="accused-details">Sections: 120B VPC, Sec. 7/13 Anti-Corruption Act</div>
+            </div>
+            
+            <div class="accused-box">
+                <div class="accused-name">3. Mahesh Prakash Patil</div>
+                <div class="accused-details">Age 48, Managing Director, Patil Realty Pvt. Ltd.</div>
+                <div class="accused-details">Sections: 120B VPC, 201 VPC</div>
+            </div>
+            
+            <div class="accused-box">
+                <div class="accused-name">4. Vivek Bhat</div>
+                <div class="accused-details">Age 31, Senior Reporter, City Ledger</div>
+                <div class="accused-details">Sections: 120B VPC</div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <div class="section-title">PART III: FACTS OF THE CASE</div>
+            
+            <div class="subsection-title">A. Background of the Deceased</div>
+            <p>Ms. Kulkarni was investigating illegal land conversion, cooperative bank loan misuse, and political collusion involving Patil Realty and the Urban Development Ministry. Her notes contained the entry <strong>"P – W – 120B?"</strong>, indicating she suspected a builder–politician conspiracy.</p>
+            
+            <div class="subsection-title">B. Timeline (18 August 2023)</div>
+            <div class="timeline">
+                <div class="timeline-item"><span class="timeline-time">20:21 hrs</span> – Patil Realty office calls Wagh (3m 42s)</div>
+                <div class="timeline-item"><span class="timeline-time">20:55–21:03 hrs</span> – CCTV detects Kite near terrace entrance</div>
+                <div class="timeline-item"><span class="timeline-time">21:00 hrs</span> – Rhea meets Kite for "final document"</div>
+                <div class="timeline-item"><span class="timeline-time">21:02–21:20 hrs</span> – Hooded figure descends to 7th floor</div>
+                <div class="timeline-item"><span class="timeline-time">21:25 hrs</span> – Rhea re-enters Flat 703</div>
+                <div class="timeline-item"><span class="timeline-time">00:30–01:00 hrs</span> – Rhea prepares tea</div>
+                <div class="timeline-item"><span class="timeline-time">03:30–04:00 hrs</span> – Estimated time of collapse</div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <div class="section-title">PART IV: CONSPIRACY FLOW GRAPH (Integrated Evidence)</div>
+            
+            <div class="flowchart">
+                <div class="flow-node-box">
+                    <div class="flow-name">RHEA KULKARNI</div>
+                    <div class="flow-subtitle">Investigating Patil Realty</div>
+                </div>
+                
+                <div class="flow-arrow">
+                    <div class="arrow-line"></div>
+                    <div class="arrow-label">Story drafts</div>
+                    <div class="arrow-head">▼</div>
+                </div>
+                
+                <div class="flow-node-box">
+                    <div class="flow-name">VIVEK BHAT</div>
+                    <div class="flow-subtitle">Colleague</div>
+                    <div class="flow-detail">• Forwarded drafts</div>
+                    <div class="flow-detail">• Leaked progress</div>
+                </div>
+                
+                <div class="flow-arrow">
+                    <div class="arrow-line"></div>
+                    <div class="arrow-label">Information leak</div>
+                    <div class="arrow-head">▼</div>
+                </div>
+                
+                <div class="flow-node-box">
+                    <div class="flow-name">MAHESH PATIL</div>
+                    <div class="flow-subtitle">Builder</div>
+                    <div class="flow-detail">• Alerts from drafts</div>
+                    <div class="flow-detail">• Coordinates via 20:21 call</div>
+                </div>
+                
+                <div class="flow-arrow">
+                    <div class="arrow-line"></div>
+                    <div class="arrow-label">20:21 call</div>
+                    <div class="arrow-head">▼</div>
+                </div>
+                
+                <div class="flow-node-box">
+                    <div class="flow-name">SANJAY WAGH</div>
+                    <div class="flow-subtitle">Political Aide</div>
+                    <div class="flow-detail">• Receives instructions</div>
+                    <div class="flow-detail">• Orders suppression</div>
+                </div>
+                
+                <div class="flow-arrow">
+                    <div class="arrow-line"></div>
+                    <div class="arrow-label">Instructions</div>
+                    <div class="arrow-head">▼</div>
+                </div>
+                
+                <div class="flow-node-box">
+                    <div class="flow-name">NIKHIL "KITE" DESHMUKH</div>
+                    <div class="flow-subtitle">Internal Source</div>
+                    <div class="flow-detail">• Lures to terrace</div>
+                    <div class="flow-detail">• Uses duplicate key</div>
+                </div>
+                
+                <div class="flow-arrow">
+                    <div class="arrow-line"></div>
+                    <div class="arrow-label">Contamination</div>
+                    <div class="arrow-head">▼</div>
+                </div>
+                
+                <div class="flow-node-box">
+                    <div class="flow-name">EXECUTION</div>
+                    <div class="flow-subtitle">Poisoning via monocrotophos</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <div class="section-title">PART V: INVESTIGATION BREAKTHROUGH</div>
+            
+            <div class="subsection-title">A. Role of the Colleague (Vivek)</div>
+            <p>Vivek forwarded the victim's drafts to the legal desk, which had active links to Patil Realty's counsel. CCTV shows him near a white sedan tied to Patil's office. He received an unexplained deposit 48 hours before the murder.</p>
+            
+            <div class="subsection-title">B. Builder's Coordination</div>
+            <p>Upon learning Rhea possessed critical evidence, Patil contacted Wagh (20:21 hrs). Patil Realty's 17:30 vendor batch payment suggests operational funding.</p>
+            
+            <div class="subsection-title">C. Wagh's Directive</div>
+            <p>As intermediary for the Minister's office, Wagh instructed Kite to neutralize the threat.</p>
+            
+            <div class="subsection-title">D. Method of Execution</div>
+            <p>Kite lured Rhea to the terrace, entered using a duplicate key, and applied monocrotophos to kettle spout, sponge, and sink strainer. The victim ingested poison through tea.</p>
+        </div>
+        
+        <div class="section">
+            <div class="section-title">PART VI: CHARGES ESTABLISHED</div>
+            <ul class="charges-list">
+                <li><strong>302 VPC –</strong> Murder by deliberate poisoning.</li>
+                <li><strong>201 VPC –</strong> Removal of phone and destruction of evidence.</li>
+                <li><strong>120B VPC –</strong> Criminal conspiracy between all four accused.</li>
+                <li><strong>Anti-Corruption Act –</strong> Abuse of public office by accused Wagh.</li>
+            </ul>
+        </div>
+        
+        <div class="section">
+            <div class="section-title">PART VII: CONCLUSION</div>
+            <p>Investigation conclusively establishes that:</p>
+            <ul class="conclusion-list">
+                <li>Vivek leaked the victim's investigation to Patil Realty.</li>
+                <li>Patil authorized suppression to protect financial and political interests.</li>
+                <li>Wagh conveyed operational instructions to Kite.</li>
+                <li>Kite executed the murder through targeted poisoning.</li>
+            </ul>
+            <p style="margin-top: 15px;">This forms a complete conspiracy under Section 120B VPC.</p>
+        </div>
+        
+        <div class="section">
+            <div class="section-title">PRAYER</div>
+            <div class="prayer">
+                <p>The Hon'ble Court is requested to:</p>
+                <ul style="margin: 15px 0; padding-left: 20px;">
+                    <li>Take cognizance of offences committed.</li>
+                    <li>Summon all accused persons for trial.</li>
+                    <li>Grant any other relief deemed appropriate.</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="signature-section">
+            <div class="signature-block">
+                <strong>Place:</strong> Nagarvati<br>
+                <strong>Date:</strong> 21 February 2024
+            </div>
+            
+            <div class="signature-block" style="margin-top: 30px;">
+                <strong>Inspector A. Korde</strong><br>
+                Criminal Investigation Bureau, Vidarbha State Police
+            </div>
+            
+            <div class="signature-block" style="margin-top: 30px;">
+                <strong>Countersigned:</strong><br>
+                Superintendent of Police (CIB), Nagarvati City
+            </div>
+        </div>
+    </div>
+</body>
+</html>
